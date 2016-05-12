@@ -1,0 +1,87 @@
+compilationUnit(structs, mdecls, vdecls, mdefs) ::= "<structs> <\n> <mdecls> <\n> <vdecls> <\n> <mdefs>"
+
+simpleClass(name,members) ::= <<
+	typedef struct <name>{
+		<members>
+	}<name>;<\n>
+>>
+
+FieldDecl(type, name) ::= "<type> <name>;<\n>" 
+FieldDeclInit(type,name,val) ::= "<type> <name> = <val>;<\n>"
+
+methodDecl(name, returnType,args) ::= "<returnType> <name> (<args; separator=\", \">);<\n>"
+
+methodDef(name, returnType, args, body) ::= <<
+	<returnType> <name> (<args; separator=", ">){
+		<body><\n>
+	}<\n>
+>>
+
+mainMethod(body,nullStmts) ::= <<
+	int main(int argc, char *argv[]){
+		<body><\n>
+		<nullStmts>
+		collect();
+		return 0;
+	}<\n>
+>>
+
+assignStmt(lhs,rhs) ::= "<lhs> = <rhs>;<\n>"
+ifelseStmt(cond,thenBlock, elseBlock) ::= <<
+	if(<cond>){
+		<thenBlock> 
+	}
+	else{
+		<elseBlock>
+	}<\n>
+>>
+
+ifStmt(cond,block) ::= <<
+	if(<cond>){
+		<block>
+	}<\n>
+>>
+
+whileStmt(cond,block) ::= <<
+	while(<cond>){
+		<block>
+	}<\n>
+>>
+
+invokeStmt(name,args) ::= "<invokeExp(name,args)>;<\n>"
+//returnStmt(exp) ::= "return <exp>;<\n>"
+returnStmt(type,exp,nullStmts) ::= <<
+	<type> joy;
+	joy=<exp>;
+	<nullStmts>
+	collect();
+	return joy;
+>>
+
+returnNull(nullStmts) ::= "<nullStmts> collect();<\n> return NULL;<\n>"
+
+forStmt(init,term,upd,block) ::= <<
+	for(<init>;<term>;<upd>){
+		<block>
+	}<\n>
+>>
+dowhileStmt(cond,block) ::= <<
+	do{
+		<block>
+	}while(<cond>);<\n>
+>>
+incDecStmt(exp,op) ::= "<postExp(exp,op)>;<\n>"
+
+binExp(exp1,op,exp2) ::= "<exp1> <op> <exp2>"
+unaryExp(exp,op) ::= "(<op><exp>)"
+postExp(exp,op) ::= "<exp><op>"
+parenExp(exp) ::= "(<exp>)"
+litExp(exp) ::= "<exp>"
+idExp(exp) ::= "<exp>"
+invokeExp(name, args) ::= "<name>(<args>)"
+arrayAccessExp(array,index) ::= "<array>[<index>]"
+fieldAccessExp(structName,field) ::= "<structName>-><field>"
+condExp(cond, ifExp, elseExp) ::= "<cond>?<ifExp>:<elseExp>"
+newStruct(name,ptr) ::= "((<name>*)gc_malloc(sizeof(<name>),&(<ptr>)))"
+newArray(type,nElems,ptr) ::= "((<type>*)gc_malloc((<nElems>)*sizeof(<type>),&(<ptr>)))"
+initArray(name,index,val) ::= "<name>[<index>] = <val>;<\n>"  
