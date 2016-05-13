@@ -532,8 +532,8 @@ Wendy Tan = 0%
 
 ———PART D - Test infrastructure - 2.5 points
 
-Path to the test harness file: /src/test/resources/
-Path to the generated c files: /bin/esj/codegen/
+1. Path to the test harness file: /src/test/resources/
+2. Path to the generated c files: /bin/esj/codegen/
 
 Contribution:
 Joydeep Mitra = 100%
