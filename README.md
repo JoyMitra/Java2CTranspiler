@@ -1,7 +1,7 @@
 # TeamD
 Compiler Extended Java to C Translator:
 Team members: Joydeep Mitra and Wendy Tan 
-Presentation : <relative path to the presented slides .pdf file>
+*	Presentation : /compiler-team-project/TranslatorGC.pdf
 
 *	PART A - Translation - 10 points 
 
