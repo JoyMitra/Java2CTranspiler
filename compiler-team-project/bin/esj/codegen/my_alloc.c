@@ -140,15 +140,23 @@ void sweep(){
 	int refListSizePostDelete = -1;
 	while(refListSize!=refListSizePostDelete)
 	{
+		if(logging)
+			printf("in while loop\n");
 		refListSize = referenceList.size;
+		if(logging)
+			printf("refListSize = %d\n",refListSize);
 		referenceList.head = deleteRef(referenceList.head);
 		refListSizePostDelete = referenceList.size;
+		if(logging)
+		printf("refListSizePostDelete = %d\n",refListSizePostDelete);
 	}
 		
 }
 
 Reference* deleteRef(Reference* head)
 {
+	if(logging)
+		printf("deleteRef called...\n");
 	if(head==NULL)
 	{
 		return NULL;
@@ -158,6 +166,8 @@ Reference* deleteRef(Reference* head)
 		Reference* tmpRef;
 		tmpRef = head->next;
 		//add to free list
+		if(logging)
+			printf("adding to free list\n");
 		if(freeList.head==NULL){
 			head->next = NULL;
 			freeList.head = head;
@@ -181,7 +191,9 @@ Reference* deleteRef(Reference* head)
 void collect()
 {
 	mark();
-	sweep();
+	//sweep();
+	if(logging)
+		printf("completing sweep...\n");
 }
 
 void printFreeList()
@@ -243,4 +255,3 @@ void printRefList()
 		}
 	}
 } 
-

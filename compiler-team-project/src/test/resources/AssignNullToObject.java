@@ -3,7 +3,6 @@ public class AssignNullToObject {
 		ANTO o;
 
 		o = null;
-		o.i = 0;
 	}
 }
 
