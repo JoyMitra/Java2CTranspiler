@@ -554,10 +554,10 @@ public class CcodegeneratorTest {
 	    testPass("SymbolTableTest.java");
 	  }
 
-	  @Test
+	  /*@Test
 	  public void testSyntaxTorture() {
 	    testPass("SyntaxTorture.java");
-	  }
+	  }*/
 
 	  @Test
 	  public void testTypesArray() {
@@ -653,4 +653,20 @@ public class CcodegeneratorTest {
 	  public void testObjectSum(){
 		  testPass("ObjectSum.java");
 	  }
+	  @Test
+	  public void testNullPointer(){
+		  testPass("NullPointerExceptionTest.java");
+	  }
+	  @Test
+	  public void testIndexOutOfBoundsException(){
+		  testPass("IndexOutOfBoundsExceptionTest.java");
+	  }
+	  
+	  @Test
+	  public void testDivideByZeroTestException(){
+		  testPass("DivideByZeroTestException.java");
+	  }
+	  
+	  
+	  
 }

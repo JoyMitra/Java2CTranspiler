@@ -191,7 +191,7 @@ Reference* deleteRef(Reference* head)
 void collect()
 {
 	mark();
-	//sweep();
+	sweep();
 	if(logging)
 		printf("completing sweep...\n");
 }
