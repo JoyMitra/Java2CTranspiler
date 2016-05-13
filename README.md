@@ -7,7 +7,7 @@ Team members: Joydeep Mitra and Wendy Tan
 
 Path to string template: /src/main/java/esj/codegen/Ctemplates.stg 
 
-List of test cases added to check translation and exception handling:
+List of test cases added to check translation and exception handling(last 3 exceptions are specificaly for exception handling):
 
           @Test
 	  public void testAEEmptyTest() {
@@ -438,6 +438,20 @@ List of test cases added to check translation and exception handling:
 	  public void testWhile() {
 	    testPass("While.java");
 	  }
+	  
+	  @Test
+	  public void testNullPointer(){
+		  testPass("NullPointerExceptionTest.java");
+	  }
+	  @Test
+	  public void testIndexOutOfBoundsException(){
+		  testPass("IndexOutOfBoundsExceptionTest.java");
+	  }
+	  
+	  @Test
+	  public void testDivideByZeroTestException(){
+		  testPass("DivideByZeroTestException.java");
+	  }
 
 Contribution:
 Joydeep Mitra = 100%
@@ -527,6 +541,9 @@ List of test cases added to test garbage collector:
 		  testPass("ObjectSum.java");
 	  }
 
+
+	
+	  
 Contribution:
 Joydeep Mitra = 100%
 Wendy Tan = 0%
