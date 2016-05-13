@@ -185,7 +185,7 @@ int g;
 		m= NULL;
 		m_array= NULL;
 
-		//collect();
+		collect();
 		return 0;
 	}
 	int returnInt (){
@@ -193,7 +193,7 @@ int g;
 		i = 0;
 			int joy;
 			joy=i;
-			//collect();
+			collect();
 			return joy;
 
 	}
@@ -204,7 +204,7 @@ int g;
 		i = 0;
 			bool joy;
 			joy=(!(!(((!c)) && (false || true) || (i > 2 && i >= (-1)) || 3 == i && ((4) != i) || 3 < 5 && (~1) <= (-((~2))))));
-			//collect();
+			collect();
 			return joy;
 
 	}
@@ -216,7 +216,7 @@ int g;
 			joy=f;
 			f= NULL;
 
-			//collect();
+			collect();
 			return joy;
 
 	}
@@ -235,9 +235,6 @@ int g;
 			i= NULL;
 
 			collect();
-			//printFreeList();
-			//printRefList();
-			printf("returned from collect");
 			return joy;
 
 	}
@@ -251,14 +248,14 @@ int g;
 			joy=(c);
 			c= NULL;
 
-			//collect();
+			collect();
 			return joy;
 
 	}
 	Empty** returnObjectArray (int* i, Empty** e){
 			Empty** joy;
 			joy=e;
-			//collect();
+			collect();
 			return joy;
 
 	}

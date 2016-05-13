@@ -554,10 +554,10 @@ public class CcodegeneratorTest {
 	    testPass("SymbolTableTest.java");
 	  }
 
-	  /*@Test
+	  @Test
 	  public void testSyntaxTorture() {
 	    testPass("SyntaxTorture.java");
-	  }*/
+	  }
 
 	  @Test
 	  public void testTypesArray() {
