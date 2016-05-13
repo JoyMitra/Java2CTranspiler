@@ -2,7 +2,8 @@
 Compiler Extended Java to C Translator:
 Team members: Joydeep Mitra and Wendy Tan 
 Presentation : <relative path to the presented slides .pdf file>
-——-PART A - Translation - 10 points 
+
+*	PART A - Translation - 10 points 
 
 Path to string template: /src/main/java/esj/codegen/Ctemplates.stg 
 
@@ -442,7 +443,7 @@ Contribution:
 Joydeep Mitra = 100%
 Wendy Tan = 0%
 
-———PART B - StaticJavaLib to C - 2.5 points
+*	PART B - StaticJavaLib to C - 2.5 points
 
 Path to the C lib file: /bin/esj/codegen/staticlib.h
 
@@ -450,7 +451,7 @@ Contribution:
 Joydeep Mitra = 100%
 Wendy Tan = 0%
 
-———PART C - Garbage collector - 10 points
+*	PART C - Garbage collector - 10 points
 
 Path to the Garbage collector code: /bin/esj/codegen/my_alloc.h
 
@@ -530,7 +531,7 @@ Contribution:
 Joydeep Mitra = 100%
 Wendy Tan = 0%
 
-———PART D - Test infrastructure - 2.5 points
+*	PART D - Test infrastructure - 2.5 points
 
 1. Path to the test harness file: /src/test/resources/
 2. Path to the generated c files: /bin/esj/codegen/
